@@ -1,0 +1,65 @@
+{
+  "empresa": {
+    "id": "129de3c2-223a-4545-8176-e1c3a252efd2",
+    "nombre": "PRIME MUSIC S.A.C.",
+    "ruc": "20510673124",
+    "razon_social": "PRIME MUSIC"
+  },
+  "servidor": {
+    "puerto": 8080,
+    "modo": "sunat"
+  },
+  "alerta_inactividad": {
+    "dias_habiles_umbral": 5,
+    "comentario": "Aviso si días hábiles desde el último comprobante emitido superan este umbral"
+  },
+  "series_bcrp": {
+    "tipo_cambio_compra": "PD04637PD",
+    "tipo_cambio_venta": "PD04638PD",
+    "expectativa_tc_12m": "PD38049AM",
+    "tasa_referencia": "PD12301MD",
+    "ipc_mensual": "PN01271PM",
+    "ipc_interanual": "PN01273PM",
+    "portal": "https://estadisticas.bcrp.gob.pe/estadisticas/series/ayuda/api"
+  },
+  "uit": {
+    "archivo": "data/uit_historico.json",
+    "fuente": "https://www.sunat.gob.pe/indicestasas/uit.html"
+  },
+  "login": {
+    "modo_dev": false
+  },
+  "clientes_prueba": [
+    {
+      "nombre": "PRIME MUSIC S.A.C.",
+      "ruc": "20510673124",
+      "usuario": "IMPORTMP",
+      "clave": "impo2051",
+      "client_id": "129de3c2-223a-4545-8176-e1c3a252efd2",
+      "client_secret": "BhyOK1Q/sHv85jSJtLUdgw==",
+      "empresa_id": "129de3c2-223a-4545-8176-e1c3a252efd2"
+    },
+    {
+      "nombre": "DISTRIBUCIONES JNV S.A.C.",
+      "ruc": "20568842970",
+      "usuario": "ERTEXICI",
+      "clave": "omairgeas",
+      "client_id": "f19631da-bae4-459f-b962-35fc24e61e13",
+      "client_secret": "Lj456hLTVUVJ1JF9mVxdqw==",
+      "empresa_id": "f19631da-bae4-459f-b962-35fc24e61e13"
+    },
+    {
+      "nombre": "SUPERPLAZA S.A.C.",
+      "ruc": "20557044494",
+      "usuario": "PRIVERPS",
+      "clave": "danessiab",
+      "client_id": "97c9a02b-05ae-4a07-b3ce-30a72925dae4",
+      "client_secret": "wTMUidgQnLF2I6+eEB8UXQ==",
+      "empresa_id": "97c9a02b-05ae-4a07-b3ce-30a72925dae4"
+    }
+  ],
+  "api_externa": {
+    "url": "",
+    "comentario": "Opcional: URL de backend externo. Vacío = API local con SUNAT real."
+  }
+}

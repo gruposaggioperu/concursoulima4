@@ -1,0 +1,47 @@
+CLIENTES DE PLATAFORMA
+
+DISTRIBUCIONES JNV S.A.C
+Nombre de su aplicación:
+Sistema c34
+URL de su aplicación:
+sistemaC34.pe
+ID:
+f19631da-bae4-459f-b962-35fc24e61e13
+CLAVE:
+Lj456hLTVUVJ1JF9mVxdqw==
+
+SUPERPLAZA SOCIEDAD ANONIMA CERRADA
+Nombre de su aplicación:
+BssoftERP
+URL de su aplicación:
+www.SuperPlaza.com
+ID:
+97c9a02b-05ae-4a07-b3ce-30a72925dae4
+CLAVE:
+wTMUidgQnLF2I6+eEB8UXQ==
+
+SUPERPLAZA S.A.C.	
+20557044494	
+PRIVERPS	
+danessiab
+
+RUC:20510673124
+RAZON SOCIAL:PRIME MUSIC
+USUARIO:IMPORTMP
+CLAVE:impo2051
+CREDENCIAL
+129de3c2-223a-4545-8176-e1c3a252efd2
+CLAVE
+BhyOK1Q/sHv85jSJtLUdgw==
+
+
+
+
+
+
+
+
+
+
+
+
