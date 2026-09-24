@@ -1,0 +1,2 @@
+# Copiar a .dev.vars para pruebas locales (wrangler dev)
+API_ORIGIN=http://127.0.0.1:8080

@@ -1,0 +1,18 @@
+name = "control-impuestos"
+main = "worker/index.js"
+compatibility_date = "2024-09-23"
+
+# Tras el primer deploy, descomenta y cambia por tu subdominio (ver PASOS-DOMINIO-PROPIO.md):
+# routes = [
+#   { pattern = "impuestos.tudominio.com", custom_domain = true }
+# ]
+
+# Frontend estático (index.html, data/)
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+# Desarrollo local: copia .dev.vars.example → .dev.vars
+# [vars]
+# API_ORIGIN = "http://127.0.0.1:8080"
