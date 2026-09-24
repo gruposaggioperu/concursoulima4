@@ -410,7 +410,7 @@ def main() -> None:
     config = load_config()
     import os
     port = int(os.environ.get("PORT") or config.get("servidor", {}).get("puerto", 8080))
-    host = os.environ.get("HOST", "127.0.0.1")
+    host = os.environ.get("HOST", "0.0.0.0")
 
     try:
         server = ThreadingHTTPServer((host, port), SireHandler)
@@ -422,7 +422,7 @@ def main() -> None:
         print("=" * 56)
         sys.exit(1)
 
-    url = f"http://127.0.0.1:{port}/"
+    url = f"http://0.0.0.0:{port}/"
     print("=" * 56)
     print("  Control de Impuestos — SUNAT SIRE (real)")
     print("=" * 56)
