@@ -252,10 +252,8 @@ body{overflow-x:hidden}
         </div>
       </div>
       <div class="cards cards-indicadores" style="margin-top:14px">
-        <div class="card"><div class="l">TIPO DE CAMBIO BCR</div><div class="v" id="cTc">-</div><div class="s" id="cTcFecha">S/ por US$ · interbancario · expectativa 12m</div></div>
         <div class="card"><div class="l">TASA DE REFERENCIA BCRP</div><div class="v" id="cTasaRef">-</div><div class="s" id="cTasaRefFecha">Política monetaria</div></div>
         <div class="card"><div class="l">INFLACIÓN (IPC)</div><div class="v" id="cIpc">-</div><div class="s" id="cIpcFecha">Lima Metropolitana · BCRP</div></div>
-        <div class="card"><div class="l">UIT VIGENTE</div><div class="v" id="cUit">S/ -</div><div class="s" id="cUitFuente">SUNAT · por año</div></div>
       </div>
     </div>
 
@@ -1020,16 +1018,16 @@ async function cargarIndicadores(anio){
 
   try{
     const d=await fetchJson(`${base}/api/indicadores?anio=${y}`, 25000);
-    okTc=pintarTc(d, elTc, elTcF);
+    if(elTc) okTc=pintarTc(d, elTc, elTcF);
     okTasa=pintarTasa(d, elTasa, elTasaF);
     okIpc=pintarIpc(d, elIpc, elIpcF);
-    okUit=pintarUit(d, y, elUit, elUitF);
+    if(elUit) okUit=pintarUit(d, y, elUit, elUitF);
     if(d.avisos?.length) console.warn('Indicadores parciales:', d.avisos);
   }catch(e){
     console.warn('Indicadores agrupados:', e.message);
   }
 
-  if(!okTc){
+  if(elTc && !okTc){
     try{ pintarTc(await fetchJson(`${base}/api/tipocambio`), elTc, elTcF); okTc=true; }catch(_){ elTc.textContent='No disponible'; }
   }
   if(!okTasa){
@@ -1038,11 +1036,11 @@ async function cargarIndicadores(anio){
   if(!okIpc){
     try{ pintarIpc(await fetchJson(`${base}/api/ipc`), elIpc, elIpcF); okIpc=true; }catch(_){ elIpc.textContent='No disponible'; }
   }
-  if(!okUit){
+  if(elUit && !okUit){
     try{ pintarUit(await fetchJson(`${base}/api/uit?anio=${y}`), y, elUit, elUitF); okUit=true; }
     catch(_){ elUit.textContent='No disponible'; elUitF.textContent='Reinicia el servidor (iniciar.bat)'; }
   }
-  if(!okTc) elTcF.textContent='Reinicia el servidor (iniciar.bat) · BCRP';
+  if(elTc && !okTc) elTcF.textContent='Reinicia el servidor (iniciar.bat) · BCRP';
 }
 
 function calcularResumen(propuestas, periodo, topProveedoresSunat=[]){
